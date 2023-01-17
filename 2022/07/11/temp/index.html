@@ -16,15 +16,15 @@
   <meta name="author" content="Su_Zipei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="$WTH$ 获得了一个柱状图,这个柱状图一共有 $N$ 个柱子,最开始第 $i$ 根柱子的高度为 $x_i$ ,他现在要将这个柱状图排成一个屋顶的形状,屋顶的定义如下:">
+    <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="temp">
 <meta property="og:url" content="https://suzipei.github.io/2022/07/11/temp/index.html">
 <meta property="og:site_name" content="苏子佩のBlog">
-<meta property="og:description" content="$WTH$ 获得了一个柱状图,这个柱状图一共有 $N$ 个柱子,最开始第 $i$ 根柱子的高度为 $x_i$ ,他现在要将这个柱状图排成一个屋顶的形状,屋顶的定义如下:">
+<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-11T09:13:00.000Z">
-<meta property="article:modified_time" content="2023-01-15T13:08:08.010Z">
+<meta property="article:modified_time" content="2023-01-17T12:59:44.961Z">
 <meta property="article:author" content="Su_Zipei">
 <meta property="article:tag" content="中文测试">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          11k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          10 分钟
+          93 分钟
         
       </span>
     
@@ -272,19 +272,22 @@
             <h1 style="display: none">temp</h1>
             
             
-              <div class="markdown-body">
-                
-                <p>$WTH$ 获得了一个柱状图,这个柱状图一共有 $N$ 个柱子,最开始第 $i$ 根柱子的高度为 $x_i$ ,他现在要将这个柱状图排成一个屋顶的形状,屋顶的定义如下: </p>
-<span id="more"></span>
-<ol>
-<li>屋顶存在一个最高的柱子,假设为 $i$ ,最终高度为 $h_i$ .它是所有柱子之中最高的. </li>
-<li>第 $j$ 根柱子的高度为 $h_j=h_i-|i-j|$ ,但这个高度必须大于 $0$ ,否则就是不合法的. </li>
-</ol>
-<p>$WTH$ 可以对一个柱子做的操作只有将其高度加一或减一, $WTH$ 正忙着享受自己的人赢生活于是他将把这个柱状图变成屋顶的任务交给了你.你需要求出最少进行多少次操作才能够把这个柱状图变成一个屋顶形状. </p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> #<span class="hljs-keyword">define</span> ll long long </span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> db double const db delt=0.881;</span><br><span class="hljs-type">const</span> db eps=<span class="hljs-number">1e-15</span>; <br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N=<span class="hljs-number">1e5</span>+<span class="hljs-number">10</span>; <br><span class="hljs-type">int</span> n,h[N]; <br>ll ansx,ansy,ans; <br><span class="hljs-function">ll <span class="hljs-title">calc</span><span class="hljs-params">(ll hmx,<span class="hljs-type">int</span> idx)</span></span>&#123; <br>    ll res=<span class="hljs-number">0</span>; <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123; <br>        res+=<span class="hljs-built_in">abs</span>(h[i]-hmx+<span class="hljs-built_in">abs</span>(i-idx)); <br>        <span class="hljs-keyword">if</span>(hmx-<span class="hljs-built_in">abs</span>(i-idx)&lt;=<span class="hljs-number">0</span>)<span class="hljs-keyword">return</span> <span class="hljs-number">0x7fffffffffff</span>; <br>    &#125; <br>    <span class="hljs-keyword">return</span> res; <br>&#125; <br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">sa</span><span class="hljs-params">()</span></span>&#123; <br>    db T=<span class="hljs-number">5000</span>; <br>    <span class="hljs-keyword">while</span>(T&gt;eps)&#123; <br>        ll x=ansx+(<span class="hljs-number">2</span>*<span class="hljs-built_in">rand</span>()-RAND_MAX)*T; <br>        ll y=ansy+(<span class="hljs-number">2</span>*<span class="hljs-built_in">rand</span>()-RAND_MAX)*T; <br>        y=(y%n+n)%n+<span class="hljs-number">1</span>; <br>        ll tmp=<span class="hljs-built_in">calc</span>(x,y); <br>        ll k=tmp-ans; <br>        <span class="hljs-keyword">if</span>(k&lt;<span class="hljs-number">0</span>||<span class="hljs-built_in">exp</span>(-k/T)*RAND_MAX&gt;<span class="hljs-built_in">rand</span>())&#123; <br>            ansx=x;ansy=y;ans=tmp; <br>        &#125; <br>        T*=delt; <br>    &#125; <br>&#125; <br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123; <br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;n); <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123; <br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;h[i]); <br>        ansx+=h[i]; <br>    &#125; <br>    ansy=n&gt;&gt;<span class="hljs-number">1</span>; <br>    ans=<span class="hljs-built_in">calc</span>(ansx,ansy); <br>    <span class="hljs-built_in">sa</span>();<span class="hljs-built_in">sa</span>();<span class="hljs-built_in">sa</span>();<span class="hljs-built_in">sa</span>(); <br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\\n&quot;</span>,ans); <br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; <br>&#125; <br></code></pre></td></tr></table></figure>
+              
+              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="5e50237f1bbc820b37ed2fd2b4dfcd2a4bf7f46e087844b22da614d16bbe1779">165d50f05814027fb7fe5e4ae8a088d8e2af6abe7aad780030dc508f63f9e70919a4bfb2dc2113c076fe9e309753355162aec8ff6c911fa1fc1967930434ef61ec6989a95a3b60d1f9fcbfec72b2e850427aa5124dc308661174185343dc23d5c2dfe8668c0c43b8203ab13f5995e23661082db80b538a893e4d67e97c2f7dd65ddff1b906cb6b9c741138d0b02d0a9bff2787ecd90d15a8b58daeec14dc669b0f11846aa08ff9787c519f22c203dcd7a5696c7658a7e5bdf6c6d71c86c15d7dc9bced50569c3aee6700f70dc22e032bdd5ffaf8aabf9f7d79a5571908df85a8601a1bd7487be526901a3a76d3379ea8882ff61097bf02ae8a495b38ad732795d3144c70f59de550abb5c39893e833db4d55d588fffab08739ea78c6d5aa38cb94961d53bdc785d89e4916b65232e99e3686ab55efcf91540aa8a6832ea7977cbe6e1a160c5e36a33077f665a1e9c6ea407ca4608ea0b72a05b949c136e72ebad39f1d36a4c894b43ec8544776527f731b8130398ebce4cbb1c37bac04cf1a6a52df90d88cf7b893ec6155637f89bfedc7f6b7ad2b58f9c2fec290c0d306c342b0fba92c436b98012e11668f78b6e42bb336128898aba6097bfaedf1285dd0dc04a9103bcf0afa98bcbfc183e72001ee2b12b843f173d03dd18f3cdfeb83c8e6ff39b39ac7620a9cfb6b180babbb6049a4ab8b8fac7bf9e95eae9f00e7c2fe3b104e03fac8433bed011fcc8debbc5994b3d05087c72c7346a9af60cfbf1af038ed99435e472d3124dbe1c34374a59923f883075f83c8dfd4a20322acc77fdf8ac64532575dc5122c3b009fa6179d600da54738913e0faec565d4b15041c07f8a7d7ee1db18ec66ff25f24a246f1d590c0413cb55086bf450d119900a9c8a594a5cc8516539895dcd87e3e28cc4a17ce73ccc3781a2a2957b24e53cffe7d7f78e64842cfde374db3bb6bd2946cfdcdd372b07f7104973b9f4ef6666d99557c229e30666120bcb1ceb7b17d1bf868bfd21b0dbac68fda2bf6ccec58c9130152e30630d89c3330204281160ac3b011637b94022fd88721fe6d5222ee9263173d2d67270c63feff53b059d19754d04171929bfdf58bc42aec2e2d6263547338012a94b6f4b5c9571b24377e9a667bb8c9b1ab118eaf305692b542b4242e8f84b0124e0536638093298edbe5d16d67da93fc182a96b3d57182d8cdd8f51f7bcdc93015a58fda7fe21297154414ae9ab709eb3f0e43a81215fc41bddb8c1e2918cb7de7b6c2875983923993c7537bd13d052d863cb9fa7a57aac055d2907961d093ea06640c5f226fa2e711c5006a710464de915905472f1beb516d24a4c446c442c5caaeac12ebe6adfb1e917f19864aafe77ee7c57104bf6be857028de205731675d1d7e297283e5dfa3601002bbf7f2bc9c93ae726c9ae8f1e66fd3ef7ab7e87eb3beedc0ea309705cd71e1b658a8a6f0b2910e78e6b2180a5fe26de20b3a399d08c830f83660fa4d36b1205571ffb5a2bd7949c02097ed5ca7daf295ad4d5b906fc6f70469b94dfee736212f59fd04ac5698c80993a50e11b175fb5f4ca68a6ddb135a43a1a2cc8309ef472313b4d94e9b34b40b4114f3fea2b864bd3cd12a1f316a8e5bfe2cf6eb8109eb2cc83eb7a55e056372d1fb8fb237c2ec5ff18b07314e66eb1a62798fa7ed74c8b9bd926483b5d81f697deb9fa2025b3cd4411223a289f12c696385bae64ef5eeb9fcff55a079cc3f34b53f073613b6293a30205f32dafa7fa03100d2c6d1b897036fa981216b66a2d1196f8718f9cd41faa6ae52963586181330d1159cf5713e4b91a55c78626df7f6314f63487f1ec327dd2ad8be84d960da3eee145e17e2128752d29e32d052e6200e8e7212973a01d0ca2107363a4a41c2989cfa9c49f89e7977bbddfc5c08ed4282d228454aa2702d38cd56f573e91b2b8f4526feddc7652cde697a4df749414ee5e0f0bef51924bff4312e49bdeffe1554c710964f93ce13d4dddfaa8d93d40af15776f6e18e1e9b27a9fc286d21d2bec68ace8ba96e9e27a00411c91f4efacdade920d6329355152dd560eea879891185741cd1ac477abcc15e9c683ef9a6aa7b13ea0106f3f0eb5b5d8709cd852ad11d7ab0d59578225d4f6d3fbc3acfd9c2accb5717419e2d98d48684dfb56e622d39e4fd758b61a78affc7321b16ea7d3c62007569d058059595ad382adbb811279d5bbf7110325157b9e6aabd22c7a1309b8076c9698fac9b0cc4508351e34bb6ca27bf8371955c5ea3d5b39135daeb38f2ea0bf3ba85cfdf1af3867aa5c4c0e74d310d064a55357a4ff17b6df40a646ff10203b7dd6a356944f5f2067876c9cc9160eea93e4e7c71c258faecabc35e8a55dab219cb018740ac0d3c002c923c7054d8d55bc8cd9aaf4ebe956501689ebda131df07e00419693a5533d17a7abfdb2f334680e6d971e3eaee92b0d55051adde75c496bd9fda3a66bb86e05ed0021d1d0d43ef1f4346f1c175b79d5bfc4a489c9250e7896bd075f04f612c7f9d20f5c4b22467bd3dc37547af32d75c81ce7586fa3cbf625ac41cdc2d0e60783e6c02704a68aa1b291e0b9a689c7519e92427bab3784120ab394770aa450ec863d692ae90eb35678318844406b989af90a07c09d6b3ced4a96d12b475df19288e3a5702b10bca674e7b4c60f6c2de35039d1ae2c0e6d67dea690df41995f364913c1a79465eeba38a5586c055674aae2a513e8527dfb3edbc1afab6391343227d3b49ca200bf2ea4aeeb28dadade67787e8ccb2705091639e457e5ce68d5ce2b6464d5806f845d16c94520d81466ea04fb4253a7c864c2f8550c31ba5f199d9387e63738013a72b1c224c9a08283c5cc5990fbef4c2c02888535a8c910406ea82bbec987fbe586ad2490d818f88f96cd25325aa19cc9fc80977b7618a5e5289558e54ac52017e51e66db912449d14a775c587a7c48547ca5b3d9a74c640bbff1016a97b60207f89e6313120d05705d0e465314409d605a68b9c130ea7c7af64b1e86b7a7578097199843242f6561de0d088a943f1643d469bfea7ef3d936bf6fa6b4a143044dd1540a516edae189ccdc7c4acc1bcdef9c7a1e28f4e86d27bd65c93369f35d693494a148a7731a1ac12b2411cd8efc019e21df702460abf22ea8ee2a4745d06849e9507b0ac73c217dc0f4982e7539884522ec602e782abb067b963ea9de4ca3d5fdaa50bb3e0df79cd2bf944e3ef092de7c9dfa3b111d0a19ad1d6bc03cffb09e02b1f458c8b93778206937e1da14a1e679c9950b4f23155be28923c38e5d9d70d9d3d14e2b2bd72637b68bd202aac56864d74fd97cad1703439b99c91066d24bb1b5336579916859e82f2172d280cc20c3dab17349beb36c18c2a72abec34b104c01e98b2b69c16dba24e71800cb440d0e8e0d8d01bea2765f2809141c642e4a8f18eedaa88c74d947b09b38a675297826a3ac8afd19cf77afeadd41904d315b2c4306620c654c543938947a048c154e82c96e2263e2d3b142a64688be96784c24c2de4adeada9ee7b70e337928c9b1517cb4c2a76c5c0290834b60f09ef38aeef7df4eb08e261e7c88b56be9d4398d5e82f5157d35cdbbc1e8be85afb550221e1821e77f8bfabc7302007879488092436d24f9f3c509123e84ad093b91448c97ee21605d61df66acdf3c44bef5dd918e690b474f471503801f8562b4f78c344e6a25f204ae671d15dd9e399f76270aae8cb926a0847b966a052d14d5c92c4dca4767374a5207c7c3214448e585f89132fb14ecb7731cbc229b8e40e34f5294c4a1245a6c519c1f6d2d7d9caba6eccdea4f934e90c65ebadeb94aaf0956de45ffc3116f4390ff2a4f6f1516cf30ff8e81b975fa66e0409fd56f77714df5604c86136ac965744bd259ed4675f3e4c30b34e33c142db06f11743c3bf43007f78c2175101dd1b0c9a5b7c28b028be6bfe7a2222d325bcc7e56864fb7ddeb56cfc599788adc88a20013f1afd2ffe2b19631bbcf4556ace684f9df37f9ee070dd2b145a901bc3cab91125364e67e069df89ef5c829de2f8b1dccdce43091975dac701830ed75d2b9a82b724d82a51f3a7bf5171160f0fcc61a877eea88ea481218699e7e1735bbd2ce056712e207fc3983ba0655bf215cc02d2a55a61a6c5fe7cee74730e9e109a15e9cb1a49576e7dcbb992b627352209dd1377f4f1f98e9ed7f4e490deed83c54b06c5a65921381ea6d8f45bc54b489b5ce2ffdb9fd3d5e5eb0c2723d81ae974b892b6101cd5d79200b509acc2146a81cc13ac962131317326f1940ee3dbb1d132794a0bf88690b995c766276446dc94fe8233d8906353d263cfac862f1516802c4de55aa3a43d8daf76112ff37e9f4388bdec05e7a6835b4cd5382610c3b5b4912e13374a528729904b225f3f5c66077044b5d212c955bd7435e65d97fafce01b84d36c29d55a9dca465f2dd52323fc89c1178113bc37c05ea91f41e845b5a2c24e33951ec247e5c36999c5979213486b3ae6e48c4390226797f4120799175b560000c488cd9f1e7fca86b14a2af4848fcd57a1d410594909e1102e4967a318817cb86894f4d7051f28896e7e78445a39933bf53d7525d86e7745b4a59fcd34b6bcf187814e48788dc137a483bbeb55c3acac356c5cff7fd700924a98fa8047b6eda2c24269882acd1702b6f78d4c72270bae1ee82c84877aac86bf8de1891514c007a8afdf10c649c2fc54ac66439676875a797bf61394c378a7d33dbdd4aea6f2c34916857f6092e7df884340f14d7ff15e0b94121c743ecc681147e05f48e64384303bec94b92c4f6783dcbbbb8ab96e8db9fd304925199f1c175c81d01dd13db877109ebca30f6a245d0c0a5cd954af71877ddd4b2f1af3a4573789f9718514f460e639fdbac3da15b810ceebfd141742da386c24449349cce3245ae22821c4d035d1355a7817310477a03789dab5ad17268978c7931c6a442a1d1abd7bd950c9348b9cec43df3dd5831b30bf99d3842ecc0f134382013713931ebfbe2c53c1ae2d7db64a00f8eb95332cda0c4d642d3c89da941415345e50c02331c4894c7a64d88f9669497d8a08816356907b533f1c9b2f51b58cf92e59563dfb91550f84c24b3b20c7c04885a0e68a08e7426a34542e44d0ef2e4ed96e3c1dcda3c7b1bca2d028b0cce2f72b5b1131f47f09512dfe6a16f8df18116d0d44a7cf57fc9363f07ed78d2d27c9e0606f5fbe2768748234fda3cf82f3b60fb19311a6429c1641c98074f22bc15d38e6c8ca2f67134b01431ff3a4dc12ae995abdda5901cfac750f9b69cd80441822ae3530fe18064eeb7e78198513b772a35c0cc1d9a31c6f8f2ecd277bd4273fe1b33ae4324736c9b6f53fe95f9911be83c8ffb95449a2f23bbb06a704c51ab7fd0665fbf85d1b2f385abcf79af6e185dcf6a9dfbe7eb844814d9d08bf8b4ba3503b91d8fa14f715dd11806708daa25c8891d763affc530d8dd8fcea892160f292f4ca724fe5b1c89a982644d6f56f332bc6785a98173648ae5817467e964def40725bbb65d6d0c0555ddc39eb390d5f13d929b6b5fc69be7f17eb20d4949ce80d35fe3ea4cdeb14532af6b0c99b13357dfdf7fe86397b1a64ab03e458076e300146318bfeace7bbddbac8e8cd064bfd724c5771a59e023478b6d224aa56a8bae5a34be393a7849102ba2100f55efcb1de21d8d9e68a77eb242fd14484216d069d985830585076ece266c568140a8238d084a3dde5e7e54668c0f2f62c7546fe511b8215f1c9386bd9b22dbfbf0cdca5c161c0fe3c5de52587967471fa88542a67b012cbc3c03c688253a06d6d705d5c96da65482083a0eeca6103bf35cd314b169325dddb3adbd90a4801ec0bb0689a8d79eb120af59488c88d0ccbda86d950d87388d96410edcc5df76ca0c38573d6e9a3c7b16ca10b6e9eeaa88f6cb269cdb652ac72edd4841aaea71d7fba5822bcd888351a16668e2ed929db76f15e2dbd6d1a30061f404b9e4b33634f440d3d4793a9ac1e6a372540f7252fe9281dbf23141b276d2612134fe6938b0b12e844de8d94897277871e26ad9b436abbc0d2beba227dfdf5092bb1ce79aa7c617a0445a6e73b378691cfcb3cb9807b188ac32634b5b4b1a189ecba70f81b7e4e5306ce94385b5dbbac1924059166cba1efcff49dd0217ae7f3e04690b82da1cd94d246905edbe00d2e262472447d56d834a462b3342e7a1dd85cf2d4352703bd72535472d10d3be0a45a94597e94d33d1e6339f68050d25faf08a95229a6782b5669d328d8e4e4ddeab09042cdaf88fe32ddc01615534018c2b3f1594563ef9f3df94d9a2336f977d095ca9c7dd1ff09063d57a75d170e15f1a4c83fe2e0ef818f5c69f4f815fc526db2b1be2799ffd81c72bc100e0a69e0aaeb47c88cad7e48fbb9de48cdd84f04d974a67f69cfceefdd58bdeebdf0c27c72343a386b2fb255ea05ff81df7e302bd522f1604c4665a09e7e59ec077442b88999e21743e510bacf4f1e06bddad70cd12c186fea3b977811f72e3a79d3251c0433f9b6fa85780dd469215e4c87f4a34448a677c0aa0b8ccddb157ed325bfae0fd0b9536d7f82aa64d735849beac939e58cc682bd286546dbaa68852b0de26f74560cb0d4e5dbdb6bc3f5bf27bb2760c20d5d33e1aa87327d38c88b398d9e3aff3b8eede91e0785c9dfc0c48cbc75c697530052ed0e831674b9e7aa2f2744ffa2bbdc96c7ae919842170cae8bf2ef17e0c0a127eed760857bc1a8699ffdd2a7afa0b20d365cef00f349be179a531261f46d614f433a0f07378a9aa840355b35d44d1976a77945d7361f509eac6b0b4e56927c4856f9265a3b5808867ac01cc8bf8f1b2053e6b6d16c686be3c3cae2c928520e74cdb5b8686c59254e2cf87e45cf6daa0ded37025cbd8a627c9f0c16ce234608712a9bc218b33fb57c992885a864e2aec7cb518fa70cbc2746547275f90c19c1c7ab9f0c90e6c05c1b4932eb8894b02eb1015c60bf657b0181c56889464360342c6ddcdc870b579191cdf6daaa83b1c65b3027f1a8559b41c3ae96583deee86e777b05e896c342a5a7be577e0e4871743091e0e626d3afc6daaeb3bef45b1014a198b8babcd222d60d639883bc66d280e6a9def3644e940704f66985a5f1af9cb93fbf8ed01658729ae6beb7bae3bd825c9f559a540dee1833e5a9705b3051b827ea10420aff9048fa81e8c8f1c40a0df05a919e56429743de2890c4ae711d320779380a1705ca9b56f32a1fbec091f70c958522ea7bd6807a060910847c6654f78cecf5e326c2f52b99f680be4e5da36a564770cebf7fa208cd727fcf1d9ae3b489648bdad7202269aa7102a13f7204817e6a2c5652450739484c565ba04cd03f7e5e5d9151ce3c6a81e9eedb07964e4878111384a3af76335c4cfbbe3d2e1467d02257f109bff6e2e977195fba7f9f57bf7123758a47e533ab0c2663e2e32303945e8be5531c52d2ee4b12b639c398165da58f7610804b949498740cf1482d4c8bb38e8200e0c724229ee74d914c7529e2cad0c2238c6fabdf09a482abef9c66a18ed84e5c7c34a5f56144551d35dd2f3574877aad3b36f0b6d55f62fc2708722bc25dab6e1321492c9a9334e58f4ea4c1fd96143f683f5b13562db6329a0b485bec62dac630a9cb0c1e62e939e11d3a5d14884e6d8a7025ab16e8f6857c22e99a38c6324e05d422d6f14a391edd90659aa9420810fbfb23b2c57e6459581ba91352707772dbb103d18064f7f7b9c44edbfe72d54b03b471116f82ac55afca42fbd39ebcf438464722e1a47e7eb7c7b75a4</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+              
 
-                
-              </div>
+              
             
             <hr/>
             <div>
@@ -296,6 +299,16 @@
 
 <span class="category-chains">
   
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%B5%8B%E8%AF%95/" class="category-chain-item">测试</a>
+  
+  
+
+      </span>
+    
   
 </span>
 
@@ -357,6 +370,29 @@
 
 
 
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/08/29/seerc2021/" title="seerc2021">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">seerc2021</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/01/31/2021/" title="回忆·贰零贰壹">
+                        <span class="hidden-mobile">回忆·贰零贰壹</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 
@@ -525,6 +561,23 @@
   
 
 
+
+
+  
+  <script defer>
+    if (document.getElementById('hbePass')) {
+      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
+        var hbePrefix = document.querySelector('hbe-prefix');
+        hbePrefix.parentElement.classList.add('markdown-body');
+        Fluid.utils.retry(function() {
+          if (Fluid.boot && Fluid.boot.refresh) {
+            Fluid.boot.refresh();
+            return true;
+          }
+        }, 100, 10);
+      })
+    }
+  </script>
 
 
   
