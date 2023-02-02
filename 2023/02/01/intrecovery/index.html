@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://suzipei.github.io/img/257871.jpg">
 <meta property="article:published_time" content="2023-02-01T03:30:40.000Z">
-<meta property="article:modified_time" content="2023-02-01T10:58:18.625Z">
+<meta property="article:modified_time" content="2023-02-02T05:07:35.019Z">
 <meta property="article:author" content="Su_Zipei">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary_large_image">
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          2.6k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          12 分钟
+          22 分钟
         
       </span>
     
@@ -296,7 +296,40 @@
 <p>$|\sqrt{x}-\sqrt{x_0}|=|\frac{x-x_0}{\sqrt{x}+\sqrt{x_0}}|\le\frac{1}{\sqrt{x_0}}|x-x_0|$</p>
 <p>如果让 $|\sqrt{x}-\sqrt{x_0}|&lt;\epsilon$，只需要让 $|x-x_0|&lt;\epsilon\sqrt{x_0}$</p>
 <p>故 $\delta$ 可以取 $\epsilon\sqrt{x_0}$，这里还有一个坑，当 $\epsilon$ 比较大的时候，$\delta$ 也会跟着变大，但是根据定义，我们考察的是 $x_0$ 的一个邻域 $[x_0-\delta,x_0+\delta]$，如果 $\delta$ 超过了 $x_0$ 会出现定义域溢出的情况，此时 $\epsilon&gt;\sqrt{x_0}$ ，一种做法是限制 $\epsilon&lt;\sqrt{x_0}$，限制上界我们是可以做到的，另一种做法是让 $\delta$和 $x_0$ 取最小值，这样的话也是成立的。</p>
-
+<h3 id="特定值极限存在的条件"><a href="#特定值极限存在的条件" class="headerlink" title="特定值极限存在的条件"></a>特定值极限存在的条件</h3><p>两个单侧极限都存在并且都相等。</p>
+<h2 id="无穷小与无穷大"><a href="#无穷小与无穷大" class="headerlink" title="无穷小与无穷大"></a>无穷小与无穷大</h2><h3 id="无穷小"><a href="#无穷小" class="headerlink" title="无穷小"></a>无穷小</h3><p>定义：在某一变化过程中，以0为极限的变量称为无穷小量。</p>
+<p>运算法则：</p>
+<ol>
+<li>无穷小与无穷小和差积都是无穷小</li>
+<li>无穷小和常数的乘积为无穷小</li>
+<li><strong>有限个</strong>无穷小的和差积都是无穷小</li>
+</ol>
+<h3 id="高阶无穷小"><a href="#高阶无穷小" class="headerlink" title="高阶无穷小"></a>高阶无穷小</h3><p>同阶无穷小：若 $\lim \frac{\alpha}{\beta}=c\ne 0$，则称 $\alpha$ 和 $\beta$ 为同阶无穷小。</p>
+<p>等价无穷小：若 $\lim \frac{\alpha}{\beta}=1$，则称 $\alpha$ 和 $\beta$ 为等价无穷小，记作 $\alpha \sim \beta$。</p>
+<p>高阶无穷小：若 $\lim \frac{\alpha}{\beta}=0$，则称 $\alpha$ 是 $\beta$ 的高阶无穷小，记作 $\alpha=o(\beta)$。</p>
+<p>$k$ 阶无穷小：若 $\lim \frac{\alpha}{\beta^k}=c$，则称 $\alpha$ 是 $\beta$ 的 $k$ 阶无穷小。</p>
+<p>在求极限时等价无穷小可以互相替换，证明如下</p>
+<p>设 $\gamma$ 是 $\alpha$ 的等价无穷小，那么 $\lim\frac{\alpha}{\beta}=\lim\frac{\alpha}\gamma\frac{\gamma}{\beta}=\lim\frac{\gamma}{\beta}$</p>
+<h3 id="无穷大"><a href="#无穷大" class="headerlink" title="无穷大"></a>无穷大</h3><p>定义：在某一变化过程中，给定一个数，<strong>无论</strong>它多么大，该变量都比这个数大，称这个变量为无穷大量。</p>
+<h2 id="极限存在准则"><a href="#极限存在准则" class="headerlink" title="极限存在准则"></a>极限存在准则</h2><h3 id="连续函数在某一点的极限是在该点的函数值。"><a href="#连续函数在某一点的极限是在该点的函数值。" class="headerlink" title="连续函数在某一点的极限是在该点的函数值。"></a>连续函数在某一点的极限是在该点的函数值。</h3><h3 id="重要极限"><a href="#重要极限" class="headerlink" title="重要极限"></a>重要极限</h3><p>$$<br>\lim_{x\to 0}\frac{\sin x}{x}=1<br>$$</p>
+<p>证明：</p>
+<p>由 $\sin x&lt;x&lt;\tan x$，可得 $1&lt;\frac{x}{\sin x}&lt;\frac{1}{\cos x}$</p>
+<p>由夹逼准则，可知原式极限为 $1$</p>
+<p>$$<br>\lim_{x\to \infty}(1+\frac{1}x)^x=e<br>$$</p>
+<p>证明：</p>
+<p>有空再补（</p>
+<p>大概过程是先由整数变量定义了自然对数底数 $e$ ，然后再证明小数的极限也是 $e$ 。</p>
+<h3 id="数列单调有界，则数列存在极限"><a href="#数列单调有界，则数列存在极限" class="headerlink" title="数列单调有界，则数列存在极限"></a>数列单调有界，则数列存在极限</h3><p>该定理可以用于证明数列存在极限，之后可以设极限为未知量，然后通过已知关系代换得到极限。</p>
+<h2 id="函数的连续性"><a href="#函数的连续性" class="headerlink" title="函数的连续性"></a>函数的连续性</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>$$<br>\forall \epsilon&gt;0,\exists \delta&gt;0,当|x-x_0|&lt;\delta时,有|f(x)-f(x_0)|&lt;\epsilon<br>$$</p>
+<p>感性理解一下就是在这个点的时候函数有定义并且不断开。</p>
+<h2 id="函数的间断性"><a href="#函数的间断性" class="headerlink" title="函数的间断性"></a>函数的间断性</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>有三种情况，没有定义，极限不存在，或者极限不等于函数值。</p>
+<h3 id="第一类间断点"><a href="#第一类间断点" class="headerlink" title="第一类间断点"></a>第一类间断点</h3><p>可去间断点：函数在某点没定义，例如 $f(x)=\frac{\sin x}x$ 在 $x=0$ 的时候没定义，但是极限是 $1$，此时如果补充定义 $f(0)=1$，那么该函数连续，$x=0$ 称为可取间断点。</p>
+<p>跳跃间断点：函数在某点断开了，即左右极限<strong>都存在</strong>但是不相等。</p>
+<p>总结：两侧极限都存在的间断点。</p>
+<h3 id="第二类间断点"><a href="#第二类间断点" class="headerlink" title="第二类间断点"></a>第二类间断点</h3><p>无穷间断点：顾名思义，极限为无穷。</p>
+<p>震荡间断点：不存在极限，例如 $f(x)=\sin\frac{1}{x}$。</p>
+<p>总结：两侧极限不都存在的间断点。</p>
+<h2 id="有界闭区间函数性质"><a href="#有界闭区间函数性质" class="headerlink" title="有界闭区间函数性质"></a>有界闭区间函数性质</h2>
                 
               </div>
             
