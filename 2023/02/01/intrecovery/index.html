@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://suzipei.github.io/img/257871.jpg">
 <meta property="article:published_time" content="2023-02-01T03:30:40.000Z">
-<meta property="article:modified_time" content="2023-02-03T12:18:47.573Z">
+<meta property="article:modified_time" content="2023-02-05T02:12:31.118Z">
 <meta property="article:author" content="Su_Zipei">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary_large_image">
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.1k 字
+          6.9k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          35 分钟
+          58 分钟
         
       </span>
     
@@ -356,17 +356,63 @@
 <h3 id="参数方程求导"><a href="#参数方程求导" class="headerlink" title="参数方程求导"></a>参数方程求导</h3><p>$$<br>\begin{cases}<br>x=\phi(t)\<br>y=\Phi(t)<br>\end{cases}<br>$$</p>
 <p>用参数代换一下就可以了</p>
 <p>$$<br>\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\mathrm{d}y}{\mathrm{d}t}\frac{\mathrm{d}t}{\mathrm{d}x}<br>$$</p>
-<h2 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h2><h1 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h1><h2 id="定积分"><a href="#定积分" class="headerlink" title="定积分"></a>定积分</h2><p>设 $f(x)$ 在区间 $[a,b]$ 上有若干分点</p>
+<h2 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h2><h1 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h1><h2 id="定积分"><a href="#定积分" class="headerlink" title="定积分"></a>定积分</h2><h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><p>设 $f(x)$ 在区间 $[a,b]$ 上有若干分点</p>
 <p>$$<br>a=x_0\le x_1\le x_2\dots\le x_{n-1}\le x_{n}=b<br>$$</p>
 <p>记 $\Delta x_i=x_i-x_{i-1},\lambda=\max{\Delta x_i}$</p>
 <p>$$<br>I=\lim_{\lambda\to 0}\sum_{i=1}^nf(x_i)\Delta x_i=\int_a^bf(x)\mathrm{d}x<br>$$  </p>
 <p>注意到无论如何取分点，当 $\lambda\to 0$ 的时候，$I$ 的值固定不变，我们称之为积分和，也叫黎曼和。</p>
 <p>为了便于计算，一般分点都是取等分点。</p>
 <p>有一些性质如果需要证明的话用定义去证明比较好证，因为定义把积分拆成了可以求和的形式。</p>
-<p>定积分中值定理：</p>
-<p>若 $f(x)$ 在 $[a,b]$ 上连续，则至少有一点 $\xi\in [a,b]$，使得</p>
+<h3 id="定积分中值定理"><a href="#定积分中值定理" class="headerlink" title="定积分中值定理"></a>定积分中值定理</h3><p>若 $f(x)$ 在 $[a,b]$ 上连续，则至少有一点 $\xi\in [a,b]$，使得</p>
 <p>$$<br>\int_a^bf(x)\mathrm{d}x=f(\xi)(b-a)<br>$$</p>
-<h2 id="不定积分"><a href="#不定积分" class="headerlink" title="不定积分"></a>不定积分</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+<h3 id="微积分基本公式"><a href="#微积分基本公式" class="headerlink" title="微积分基本公式"></a>微积分基本公式</h3><p>定义 $f(x)$ 的原函数 $F(x)$ 满足条件 $F’(x)=f(x)$</p>
+<p>有 $\int_a^b=F(b)-F(a)$，这个式子称为牛顿-莱布尼茨公式，也是微积分基本公式。</p>
+<h2 id="不定积分"><a href="#不定积分" class="headerlink" title="不定积分"></a>不定积分</h2><h3 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h3><p>上面提到了一个函数的原函数定义，而不定积分就是用来求函数的原函数。</p>
+<p>我们将 $f(x)$ 的全体原函数 $F(x)$ 记作 $f(x)$ 的不定积分。</p>
+<p>$$<br>\int f(x)=F(x)+C<br>$$</p>
+<h3 id="基本积分表"><a href="#基本积分表" class="headerlink" title="基本积分表"></a>基本积分表</h3><p>参考开头的导数表。</p>
+<h2 id="换元积分"><a href="#换元积分" class="headerlink" title="换元积分"></a>换元积分</h2><h3 id="第一类换元积分法"><a href="#第一类换元积分法" class="headerlink" title="第一类换元积分法"></a>第一类换元积分法</h3><p>也叫凑微分法，本质是整体代换，改变微分的变量。</p>
+<p>$$<br>\int f(\varphi(x))\varphi’(x) \mathrm{d}x=\int f(\varphi)\mathrm{d}\varphi(x)=[\int f(u)\mathrm{d}u]_{u=\varphi(x)}<br>$$</p>
+<h3 id="第二类换元积分法"><a href="#第二类换元积分法" class="headerlink" title="第二类换元积分法"></a>第二类换元积分法</h3><p>利用反函数进行代换。</p>
+<p>$$<br>\int f(x) \mathrm{d}x=[\int f(\phi(t))\phi’(t)\mathrm{d}x]_{x=\phi(t)}<br>$$</p>
+<h3 id="利用换元进行等式的证明"><a href="#利用换元进行等式的证明" class="headerlink" title="利用换元进行等式的证明"></a>利用换元进行等式的证明</h3><p>证明<br>$$<br>\int_{0}^\pi xf(\sin x)\mathrm{d}x=\frac{\pi}2\int_{0}^\pi f(\sin x)\mathrm{d}x<br>$$</p>
+<p>$$<br>\begin{aligned}<br>\int_{0}^\pi xf(\sin x)\mathrm{d}x &amp; = \int_{\pi}^0 (\pi-t)f(\sin (\pi-t))\mathrm{d}{(\pi-t)} \  &amp; =  \int_{0}^{\pi}\pi f(\sin t)\mathrm{d}t-\int_{0}^{\pi}tf(\sin t)\mathrm{d}t\&amp; =\int_{0}^{\pi}\pi f(\sin x)\mathrm{d}x-\int_{0}^{\pi}xf(\sin x)\mathrm{d}x<br>\end{aligned}<br>$$</p>
+<p>然后移项一下就得到了，</p>
+<p>这里的证明主要是通过换元得到一个和原来形式相同的式子，而积分变量是可以随意替换的，所以两个式子等价。</p>
+<p>这个式子的证明告诉我们，如果积分区间是 $[0,\pi]$ ，并且含有 $x$，可以直接把 $x$ 去掉用 $\frac{\pi}2$ 来代替。</p>
+<p>证明</p>
+<p>$$<br>\int_{a}^{a+T}f(x)\mathrm{d}x=\int_{0}^Tf(x)\mathrm{d}x<br>$$</p>
+<p>$$<br>\begin{aligned}<br>\int_{a}^{a+T}f(x)\mathrm{d}x &amp; = \int_{a}^{0}f(x)\mathrm{d}x+\int_{0}^{T}f(x)\mathrm{d}x+\int_{T}^{a+T}f(x)\mathrm{d}x\&amp;=\int_{a}^{0}f(x)\mathrm{d}x+\int_{0}^{T}f(x)\mathrm{d}x+\int_{0}^{a}f(x)\mathrm{d}x\&amp;= \int_{0}^{T}f(x)\mathrm{d}x<br>\end{aligned}<br>$$</p>
+<p>这个证明是一个显然的结论，不过具体的过程书写下来还是有些地方不太清楚，这种证明可以把原积分式子拆掉，然后证明一些余项加起来是 $0$。</p>
+<h2 id="分部积分"><a href="#分部积分" class="headerlink" title="分部积分"></a>分部积分</h2><h3 id="定义-4"><a href="#定义-4" class="headerlink" title="定义"></a>定义</h3><p>$$<br>(uv)’=u’v+uv’\<br>u’v=(uv)’-uv’\<br>\int u’v=uv-\int uv’\<br>\int v\mathrm{d}u=uv-\int u\mathrm{d}v<br>$$</p>
+<h3 id="重要推论"><a href="#重要推论" class="headerlink" title="重要推论"></a>重要推论</h3><p>$$<br>\begin{aligned}<br>I_n &amp;= \int_{0}^{\frac{\pi}2}sin^nx\mathrm{d}x=\int_{0}^{\frac{\pi}2}cos^nx\mathrm{d}x\<br>&amp;=\begin{cases}<br>    \frac{n-1}n \cdot\frac{n-3}{n-2}\dots\frac{3}4\frac{1}2\frac{\pi}2, n为偶数\<br>    \frac{n-1}n \cdot\frac{n-3}{n-2}\dots\frac{4}5\frac{2}3, n为奇数<br>\end{cases}<br>\end{aligned}<br>$$</p>
+<p>证明是直接分部积分即可。</p>
+<h2 id="有理函数的积分"><a href="#有理函数的积分" class="headerlink" title="有理函数的积分"></a>有理函数的积分</h2><h3 id="定义-5"><a href="#定义-5" class="headerlink" title="定义"></a>定义</h3><p>两个多项式的商 $\frac{P(x)}{Q(x)}$，称为有理分式，下面证明这种分式一定可积。</p>
+<h3 id="拆分"><a href="#拆分" class="headerlink" title="拆分"></a>拆分</h3><p>通过多项式除法可以将上述分式拆分成多项式和一个真分式的和，多项式的积分是容易求得的，只考虑真分式如何积分。</p>
+<p>对于 $\frac{P(x)}{Q(x)}$，对 $Q(x)$ 在<strong>实数</strong>范围内进行因式分解，最后得到的式子只有两种类型，$(x-a)^k$ 和 $(x^2+px+q)^l$。</p>
+<p>对于 $(x-a)^k$ 进行拆分，可以拆成 $k$ 个分式的和</p>
+<p>$$<br>\frac{A_1}{(x-a)}+\frac{A_2}{(x-a)^2}+\dots+\frac{A_3}{(x-a)^{k-1}}+\frac{A_2}{(x-a)^k}<br>$$</p>
+<p>对于 $(x^2+px+q)^l$ 进行拆分，可以拆分成 $l$ 个分式的和</p>
+<p>$$<br>\frac{M_1x+N_1}{(x^2+px+q)}+\frac{M_2x+N_2}{(x^2+px+q)^2}+\dots+\frac{M_{l-1}x+N_{l-1}}{(x^2+px+q)^{l-1}}+\frac{M_lx+N_l}{(x^2+px+q)^l}<br>$$</p>
+<p>于是只要解决上述分式的积分，就能够完成对有理函数的积分</p>
+<h3 id="积分-1"><a href="#积分-1" class="headerlink" title="积分"></a>积分</h3><p>首先解决第一种类型的，这个比较好解决</p>
+<p>$$<br>\int \frac{A_k}{(x-a)^k}\mathrm{d}x=A_k\int \frac{\mathrm{d}(x-a)}{(x-a)^k}=\frac{A_k}{1-k}(x-a)^{1-k}<br>$$</p>
+<p>然后是第二种类型的积分</p>
+<p>先解决分子中的一次项，只需要配凑一下常数，用第一类换元积分即可。</p>
+<p>对于常数项，配凑成 $\frac{1}{x^2+1}$ 的形式然后积分即可。</p>
+<p>注意如果 $l&gt;1$ ,则需要使用分部积分进行降幂。</p>
+<h3 id="可化为有理函数的积分"><a href="#可化为有理函数的积分" class="headerlink" title="可化为有理函数的积分"></a>可化为有理函数的积分</h3><p>如果是三角函数的积分，可以使用万能公式进行代换</p>
+<p>如果是根式，可以直接换元然后升幂</p>
+<p>如果分母次幂比较大，可以进行倒代换</p>
+<h2 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h2><h3 id="无穷限上的反常积分"><a href="#无穷限上的反常积分" class="headerlink" title="无穷限上的反常积分"></a>无穷限上的反常积分</h3><p>$$<br>\int_{a}^{+\infty}f(x)\mathrm{d}x=\lim_{t\to+\infty}\int_{a}^{t}f(x)\mathrm{d}x<br>$$</p>
+<p>若该极限存在，则说明反常积分存在，也称收敛，否则不存在，也称发散。</p>
+<p>易错，$\int_{-\infty}^{+\infty}\frac{1}{x}\mathrm{d}x=0$</p>
+<p>这个反常积分并不存在。</p>
+<blockquote>
+<p>你只会思考它的值是多少，而并不关注它是否存在</p>
+</blockquote>
+<h3 id="无界函数的反常积分"><a href="#无界函数的反常积分" class="headerlink" title="无界函数的反常积分"></a>无界函数的反常积分</h3><p>和上面一样，只是由无穷改为了某个数。</p>
+<h1 id="微分方程-1"><a href="#微分方程-1" class="headerlink" title="微分方程"></a>微分方程</h1>
                 
               </div>
             
