@@ -16,12 +16,12 @@
   <meta name="author" content="Su_Zipei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="基础篇代码缩进表示程序块，缩进格式要严格。 列表数据类型区别于C语言，多增加了一个列表，和C语言的数组相似，使用前要定义。 列表可以正向访问（索引为正数）也可以逆向访问（索引为负数）。 使用 in 判断一个元素是否在列表内。 字符串字符串索引[M] 字符串切片[1:3] eval评估语句，去掉最外层的引号 I&#x2F;O输入使用input，input的时候可以加入提示信息 输出格式化&amp;#123;:.2f&amp;">
+    <meta name="description" content="基础篇 代码缩进表示程序块，缩进格式要严格。 列表 数据类型区别于C语言，多增加了一个列表，和C语言的数组相似，使用前要定义。 列表可以正向访问（索引为正数）也可以逆向访问（索引为负数）。 使用 in 判断一个元素是否在列表内。 字符串 字符串索引[M] 字符串切片[1:3] eval评估语句，去掉最外层的引号 I&#x2F;O 输入使用input，input的时候可以加入提示信息 输出格式化&amp;#123;:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python笔记">
 <meta property="og:url" content="https://suzipei.github.io/2022/12/01/python/index.html">
 <meta property="og:site_name" content="苏子佩のBlog">
-<meta property="og:description" content="基础篇代码缩进表示程序块，缩进格式要严格。 列表数据类型区别于C语言，多增加了一个列表，和C语言的数组相似，使用前要定义。 列表可以正向访问（索引为正数）也可以逆向访问（索引为负数）。 使用 in 判断一个元素是否在列表内。 字符串字符串索引[M] 字符串切片[1:3] eval评估语句，去掉最外层的引号 I&#x2F;O输入使用input，input的时候可以加入提示信息 输出格式化&amp;#123;:.2f&amp;">
+<meta property="og:description" content="基础篇 代码缩进表示程序块，缩进格式要严格。 列表 数据类型区别于C语言，多增加了一个列表，和C语言的数组相似，使用前要定义。 列表可以正向访问（索引为正数）也可以逆向访问（索引为负数）。 使用 in 判断一个元素是否在列表内。 字符串 字符串索引[M] 字符串切片[1:3] eval评估语句，去掉最外层的引号 I&#x2F;O 输入使用input，input的时候可以加入提示信息 输出格式化&amp;#123;:">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-01T12:46:00.000Z">
 <meta property="article:modified_time" content="2023-01-17T12:14:57.658Z">
@@ -274,28 +274,37 @@
             
               <div class="markdown-body">
                 
-                <h1 id="基础篇"><a href="#基础篇" class="headerlink" title="基础篇"></a>基础篇</h1><p>代码缩进表示程序块，缩进格式要严格。</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>数据类型区别于C语言，多增加了一个列表，和C语言的数组相似，使用前要定义。</p>
+                <h1>基础篇</h1>
+<p>代码缩进表示程序块，缩进格式要严格。</p>
+<h2 id="列表">列表</h2>
+<p>数据类型区别于C语言，多增加了一个列表，和C语言的数组相似，使用前要定义。</p>
 <p>列表可以正向访问（索引为正数）也可以逆向访问（索引为负数）。</p>
 <p>使用 in 判断一个元素是否在列表内。</p>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串索引<code>[M]</code></p>
+<h2 id="字符串">字符串</h2>
+<p>字符串索引<code>[M]</code></p>
 <p>字符串切片<code>[1:3]</code></p>
 <p><code>eval</code>评估语句，去掉最外层的引号</p>
-<h2 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h2><p>输入使用<code>input</code>，<code>input</code>的时候可以加入提示信息</p>
+<h2 id="I-O">I/O</h2>
+<p>输入使用<code>input</code>，<code>input</code>的时候可以加入提示信息</p>
 <p>输出格式化<code>&#123;:.2f&#125;.format(x)</code></p>
 <p>在<code>print</code>后面加上<code>end=&quot;&quot;</code>，可以让输出不换行</p>
-<h2 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h2><p><code>if elif else</code> 三种</p>
+<h2 id="分支语句">分支语句</h2>
+<p><code>if elif else</code> 三种</p>
 <p>最后必须要加上冒号，注意缩进</p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p><code>import</code> 直接引用</p>
+<h2 id="引用">引用</h2>
+<p><code>import</code> 直接引用</p>
 <p><code>from x import *</code>全部引用</p>
 <p><code>import x as</code>用库别名</p>
-<h2 id="range-函数"><a href="#range-函数" class="headerlink" title="range 函数"></a>range 函数</h2><p><code>for i in range(4)</code>=<code>for(int i=0;i&lt;4;i++)</code></p>
+<h2 id="range-函数">range 函数</h2>
+<p><code>for i in range(4)</code>=<code>for(int i=0;i&lt;4;i++)</code></p>
 <p><code>for i in range(m,n)</code>产生循环计数序列[m,n-1]</p>
-<h2 id="数值运算函数"><a href="#数值运算函数" class="headerlink" title="数值运算函数"></a>数值运算函数</h2><p><code>divmod(x,y)</code>返回<code>x//y,x%y</code></p>
-<p><code>pow(x,y[,z])</code>快速幂，对 $z$ 取模（可省略）</p>
-<p><code>round(x[,d])</code>四舍五入，保留 $d$ 位小数，默认为 $0$</p>
+<h2 id="数值运算函数">数值运算函数</h2>
+<p><code>divmod(x,y)</code>返回<code>x//y,x%y</code></p>
+<p><code>pow(x,y[,z])</code>快速幂，对 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span> 取模（可省略）</p>
+<p><code>round(x[,d])</code>四舍五入，保留 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span> 位小数，默认为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></p>
 <p><code>max,min</code>对多个整数求最大最小值</p>
-<h1 id="Turtle-库"><a href="#Turtle-库" class="headerlink" title="Turtle 库"></a>Turtle 库</h1><p><code>setup(width,height,startx,starty)</code>设置窗体大小</p>
+<h1>Turtle 库</h1>
+<p><code>setup(width,height,startx,starty)</code>设置窗体大小</p>
 <p><code>goto()</code>绝对坐标</p>
 <p><code>fd</code>向前<code>bk</code>向后<code>circle(r,angle)</code>以左侧某个位置为圆心，画弧</p>
 <p><code>seth</code>改变前进方向<code>left right</code>向左向右</p>
