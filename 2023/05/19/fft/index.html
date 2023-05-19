@@ -16,16 +16,16 @@
   <meta name="author" content="Su_Zipei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="傅里叶变换与信号 信号 首先思考一个问题，我们是如何区分开两个同时说话的人的声音的？ 实际上，不同人说话的声波有不同的特性。男人声音低沉，也即声波频率较低；女人声音尖亮，也即声波的频率较高。 同一个人说话声音的频率相近，把混合声波中频率相近的部分分离出来，就能得到每个人各自说话的波形。 也就是说，对于声音，我们将其拆分为频率不同的若干个信号，之后就可以对于每个信号单独处理。 从数学上来讲，我们可以">
+    <meta name="description" content="信号 首先思考一个问题，我们是如何区分开两个同时说话的人的声音的？ 实际上，不同人说话的声波有不同的特性。男人声音低沉，也即声波频率较低；女人声音尖亮，也即声波的频率较高。 同一个人说话声音的频率相近，把混合声波中频率相近的部分分离出来，就能得到每个人各自说话的波形。 也就是说，对于声音，我们将其拆分为频率不同的若干个信号，之后就可以对于每个信号单独处理。 从数学上来讲，我们可以用一个函数 f(t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="傅里叶变换">
 <meta property="og:url" content="https://suzipei.github.io/2023/05/19/fft/index.html">
 <meta property="og:site_name" content="苏子佩のBlog">
-<meta property="og:description" content="傅里叶变换与信号 信号 首先思考一个问题，我们是如何区分开两个同时说话的人的声音的？ 实际上，不同人说话的声波有不同的特性。男人声音低沉，也即声波频率较低；女人声音尖亮，也即声波的频率较高。 同一个人说话声音的频率相近，把混合声波中频率相近的部分分离出来，就能得到每个人各自说话的波形。 也就是说，对于声音，我们将其拆分为频率不同的若干个信号，之后就可以对于每个信号单独处理。 从数学上来讲，我们可以">
+<meta property="og:description" content="信号 首先思考一个问题，我们是如何区分开两个同时说话的人的声音的？ 实际上，不同人说话的声波有不同的特性。男人声音低沉，也即声波频率较低；女人声音尖亮，也即声波的频率较高。 同一个人说话声音的频率相近，把混合声波中频率相近的部分分离出来，就能得到每个人各自说话的波形。 也就是说，对于声音，我们将其拆分为频率不同的若干个信号，之后就可以对于每个信号单独处理。 从数学上来讲，我们可以用一个函数 f(t">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://suzipei.github.io/img/fft.jpg">
 <meta property="article:published_time" content="2023-05-19T04:27:12.000Z">
-<meta property="article:modified_time" content="2023-05-19T05:05:22.791Z">
+<meta property="article:modified_time" content="2023-05-19T05:09:35.459Z">
 <meta property="article:author" content="Su_Zipei">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary_large_image">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          885 字
+          927 字
         
       </span>
     
@@ -278,8 +278,7 @@
             
               <div class="markdown-body">
                 
-                <h2 id="傅里叶变换与信号">傅里叶变换与信号</h2>
-<h3 id="信号">信号</h3>
+                <h2 id="信号">信号</h2>
 <p>首先思考一个问题，我们是如何区分开两个同时说话的人的声音的？</p>
 <p>实际上，不同人说话的声波有不同的特性。男人声音低沉，也即声波频率较低；女人声音尖亮，也即声波的频率较高。</p>
 <p>同一个人说话声音的频率相近，把混合声波中频率相近的部分分离出来，就能得到每个人各自说话的波形。</p>
@@ -288,7 +287,7 @@
 <p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>a</mi><mn>1</mn></msub><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><msub><mi>f</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>+</mo><mo>⋯</mo><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(t)=a_1f_1(t)+a_2f_2(t)+\dots+a_nf_n(t)
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span></span></p>
 <p>这里的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">f_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 构成的一组向量表示基底。</p>
-<h3 id="傅里叶级数">傅里叶级数</h3>
+<h2 id="傅里叶级数">傅里叶级数</h2>
 <p>傅里叶级数可以用于展开一个周期函数，将其转化成若干个不同频率的函数和，不难发现，这个就是上面的分解过程所要做的事情</p>
 <p>形式化的讲，傅里叶展开定义为</p>
 <p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∼</mo><mfrac><msub><mi>a</mi><mn>0</mn></msub><mn>2</mn></mfrac><mo>+</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mo stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mi>cos</mi><mo>⁡</mo><mi>n</mi><mi>x</mi><mo>+</mo><msub><mi>b</mi><mi>n</mi></msub><mi>sin</mi><mo>⁡</mo><mi>n</mi><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x) \sim \frac{a_0}{2}+\sum_{n=1}^{\infty}(a_n\cos nx+b_n\sin nx)
@@ -296,11 +295,19 @@
 <p>右端的三角函数式即为傅里叶级数，这里可以看出，傅里叶展开将函数写成了若干个不同频率的三角函数的和。</p>
 <p>尝试去证明一下这个式子，会发现由右向左证明必要性是比较简单的，显然若干个周期函数的和一定是一个周期函数，但是由左向右证明充分性就比较困难，即如何证明任意一个周期函数都可以写成若干个三角函数的和。</p>
 <p>之后的傅里叶变换就提供了展开的方式。</p>
-<h3 id="时域与频域">时域与频域</h3>
+<h2 id="时域与频域">时域与频域</h2>
 <p>傅里叶变换的核心思想是将函数从时域转化到频域，也就是将函数从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> 转化到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">F(\omega)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mclose">)</span></span></span></span> ，这里的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi></mrow><annotation encoding="application/x-tex">\omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span> 表示频率。</p>
 <p>时域和频域的区别是什么呢</p>
 <p><img src="/img/fft1.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>其实很简单，如上图所示，时域表示的是函数随时间变化的情况，而频域表示的是函数的频率分布情况，也就是从不同的方向看数轴</p>
+<h2 id="傅里叶变换">傅里叶变换</h2>
+<p>将多个不同频率的波合并成一个波是比较好合并的</p>
+<p><img src="/img/fft2.png" srcset="/img/loading.gif" lazyload alt=""><br>
+<img src="/img/fft3.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>合并完成之后是</p>
+<p><img src="/img/fft4.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>但是将一个波拆成多个波就比较难了</p>
+<p><img src="/img/fft5.png" srcset="/img/loading.gif" lazyload alt=""></p>
 
                 
               </div>
