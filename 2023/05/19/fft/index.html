@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://suzipei.github.io/img/fft.jpg">
 <meta property="article:published_time" content="2023-05-19T04:27:12.000Z">
-<meta property="article:modified_time" content="2023-05-19T05:09:35.459Z">
+<meta property="article:modified_time" content="2023-05-19T08:20:55.590Z">
 <meta property="article:author" content="Su_Zipei">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary_large_image">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          927 字
+          1.2k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          8 分钟
+          11 分钟
         
       </span>
     
@@ -308,6 +308,21 @@
 <p><img src="/img/fft4.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>但是将一个波拆成多个波就比较难了</p>
 <p><img src="/img/fft5.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>我们定义组分频率是拆分后某个波的频率，然后按照某个频率将波画在一张图上面，定义这个频率为缠绕频率</p>
+<p><img src="/img/fft6.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>例如上图就是缠绕频率为0.65画出的一个波</p>
+<p>来看一下当缠绕频率和组分频率相等时会发生什么</p>
+<p><img src="img/fft7.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>会发现这个图形的分布没有那么均匀了，相对于缠绕频率为0.65的时候，它偏向了右侧</p>
+<p>我们先用一个通俗的概念——重心，来表示这个图形的分布情况，不难发现，当缠绕频率和组分频率相等时，重心会发生偏移，不相等的时候，重心会在原点附近</p>
+<p><img src="/img/fft8.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/fft9.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>现在尝试通过这个理论来分解某个波，我们先把两个波合并，得到我们要分解的波</p>
+<p><img src="/img/fft10.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/fft11.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>把重心的横坐标映射到二维坐标上</p>
+<p><img src="/img/fft12.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>容易发现在某些地方我们会有一个很明显的峰，这个峰对应的频率就是分解出来的波的频率</p>
 
                 
               </div>
