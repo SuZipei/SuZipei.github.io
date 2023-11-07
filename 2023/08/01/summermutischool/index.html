@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://suzipei.github.io/img/fft.jpg">
 <meta property="article:published_time" content="2023-08-01T02:09:32.000Z">
-<meta property="article:modified_time" content="2023-11-07T04:00:42.669Z">
+<meta property="article:modified_time" content="2023-11-07T07:25:15.596Z">
 <meta property="article:author" content="Su_Zipei">
 <meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary_large_image">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.2k 字
+          4.4k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          36 分钟
+          37 分钟
         
       </span>
     
@@ -387,6 +387,14 @@
 <h4 id="I-2">I</h4>
 <p>给定一棵树，每个结点都有一个颜色集合，可以在某个点切换颜色，每次询问能否在一条路径上从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 走到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>，可以走的条件为当前颜色在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 的颜色集合中</p>
 <p>考虑一个贪心，一定是一直走，直到不能走为止才会换颜色，所以可以倍增维护这个信息，有一些细节，比较难写</p>
+<h4 id="J-3">J</h4>
+<p>给定若干组大小关系，要求构造若干个赋值，使得每个大小关系至少在一个赋值中成立</p>
+<p>构造方式比较多，首先容易使用拓扑排序来判断是否为有向无环图</p>
+<p>否则只需要两个序列即可</p>
+<p>最简单的方式是构造一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">1-n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 的排列和一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 的排列</p>
+<p>我的方式是sb的 dfs 树，树边和返祖边构成两个序列</p>
+<h3 id="第四场">第四场</h3>
+<h4 id=""></h4>
 <h2 id="杭电多校">杭电多校</h2>
 
                 
@@ -456,6 +464,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2023/11/07/yellowblue/" title="兰兰姐姐的学习计划">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">兰兰姐姐的学习计划</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
